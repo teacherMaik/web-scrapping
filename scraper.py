@@ -24,60 +24,8 @@ def clean_rule_text(rule):
 
     return rule
 
-"""
-for i in range(3):
-
-    section = card_sections[i]
-    
-    category = None
-    legality_info = None
-    
-    a_tag = section.find('a', attrs={'name': True})
-    if a_tag:
-
-        category = a_tag['name']
-
-    legality_tag = section.find('div', class_='card')
-
-    if legality_tag:
-
-        legality_list = legality_tag['class']
-        legalities = [cls for cls in legality_list if cls.startswith('legal-')]
-        legality_info = " ".join(legalities)
-
-    cards = section.select('div.card-sm')
-
-    print(legality_info)
-    print(len(cards))
-
-    for card in cards:
-
-        # print(card)
-        card_data = {}
-
-        link_scryfall = None
-        link_tag = card.find('a')
-
-        if link_tag:
-
-            link_scryfall = link_tag['href']
-        
-        name_tag = card.find('div', class_='cardname')
-        if name_tag:
-            card_name = name_tag.string
-            card_data['name'] = card_name
-
-        card_data['category'] = category
-        card_data['link'] = link_scryfall
-        card_data['legalities'] = legality_info
-
-        card_tags = card.find('div', class_='cardtags')
-        if card_tags:
-
-            color_scheme_tag = card_tags.find('')
-
-        print(card_data)"""
-
+# Wizards search urls for all lands
+url_params = ['?page=0', '?page=1', '?page=2', '?page=3', '?page=4', '?page=5', '?page=6', '?page=7', '?page=8', '?page=9', '?page=10', '?page=11', '?page=0']
 
 url_1 = 'https://gatherer.wizards.com/Pages/Search/Default.aspx?page=1&type=+[Land]'
 response = requests.get(url_1)
