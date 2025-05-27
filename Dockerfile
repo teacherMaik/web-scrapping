@@ -8,9 +8,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# This will copy the entire python script. Make sure it is complete
-COPY scraper.py .
-
 # This 
 RUN mkdir -p /app/output
 
