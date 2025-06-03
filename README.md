@@ -7,7 +7,7 @@ This repository is shared for those interesed in trying web scraping without nee
 2. Open a terminal and navigate to where you want to clone this repository.
 3. Use git clone then navigate to the project folder (directory) 'web-scrapping'
 
-# Dcokerfile
+# Dockerfile
 1. Docker will use a slim verions of Python, so Docker image weighs less.
 2. Sets the working directory to /app
 3. Copys the requirements.txt file
