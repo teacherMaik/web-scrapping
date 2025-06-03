@@ -7,8 +7,15 @@ This repository is shared for those interesed in trying web scraping without nee
 2. Open a terminal and navigate to where you want to clone this repository.
 3. Use git clone then navigate to the project folder (directory) 'web-scrapping'
 
+# Dcokerfile
+1. Docker will use a slim verions of Python, so Docker image weighs less.
+2. Sets the working directory to /app
+3. Copys the requirements.txt file
+4. Installs all packages and libraries necesary indicated in requirements.txt
+5. Runs the container with command python scraper.py
+
 # Build the Docker image
-This can be done from vscode. Make sure you have completed the code necessary in the scraper.py file.
+This can be done from vscode. (You can continuously work on the scraper.py file without having to rebuild the image).
 
 ### From Terminal:
 docker build -t web-scraper .
@@ -22,6 +29,10 @@ docker run --rm -v "$PWD/output":/app/output web-scraper
 3. "$PWD/output" is local directory (Windows) where any saved files will be dumped
 4. "/app/output" is congainer volume directory where files will be saved when container is running
 5. "web-scraper" is the name of the Docker image defined from the build command
+
+You can develop your scraper.py code as you go and run the docker command at any time to visualize results.
+
+### ENJOY!
 
 
 

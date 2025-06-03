@@ -4,6 +4,7 @@ import pandas as pd
 import re
 import time
 
+# For transparency, please use this header and url:
 headers = {"User-Agent": "LudotecaScraperBot/1.0 (+https://ludotecaenlanube.com)"}
 url = "https://ludotecaenlanube.com"
 

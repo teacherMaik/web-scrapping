@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN mkdir -p /app/output
 
 # Default command to run the scraper
-CMD ["python", "scraper_try.py"]
+CMD ["python", "scraper.py"]
